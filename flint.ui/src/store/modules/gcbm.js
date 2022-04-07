@@ -664,7 +664,7 @@ export default {
       bodyFormData.append('title', this.state.gcbm.config.title)
       console.log([...bodyFormData])
       axios
-        .post('http://127.0.0.1:8081/gcbm/new', bodyFormData)
+        .post('https://gcbm.azurewebsites.net/gcbm/new', bodyFormData)
         .then((response) => {
           this._vm.$toast.success(`${response.data.data}`, { timeout: 5000 })
           console.log(response)

@@ -229,7 +229,7 @@ export default {
       let final_config_string = parsed_config_string.replaceAll('#$"', ' ')
 
       axios
-        .post('http://127.0.0.1:8080/point', final_config_string)
+        .post('https://flint-example.azurewebsites.net/point', final_config_string)
         .then((response) => {
           this._vm.$toast.success(`Configuration loaded for Point.`, {
             timeout: 2000
